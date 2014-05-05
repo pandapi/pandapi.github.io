@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+		<title>Federal School Budget Funding</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
+		<style type="text/css">
+		
+		body{ 
+    background-image: url('https://raw.githubusercontent.com/pandapi/hyacinthempinado/master/background%20copy.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav li {
+    float: left;
+    font-size: 15px;
+    
+}
+
+.nav a:link{
+    color: #FFFFFF;
+    display: inline;
+    font-weight: bold;
+    padding: 15px;
+    font-family: 'Shift', sans-serif;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: #CD03E4;
+    text-decoration: none;
+}
+
+.nav ul{
+    margin-left: 300px;
+    list-style-type: none;
+}
+
+.banner img{
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-top: 40px;
+    margin-left: -20px;
+}
+
+.headline h1{
+    text-align: center;
+    font-family: 'Shift', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+			.axis path,
+			.axis line {
+				fill: none;
+				stroke: #A9E2F3;
+				shape-rendering: crispEdges;
+			}
+
+			.axis text {
+				font-family: sans-serif;
+				font-size: 14px;
+			}
+
+body {
+  font: 10px sans-serif;
+}
+			circle {
+				fill-opacity: 0.5;
+			}
+			circle:hover {
+			  fill-opacity: 0.9;
+			}
+			.plan_tooltip {   
+ 				 position: absolute;           
+				  text-align: center;           
+				  // width: 60px;                  
+				  // height: 28px;                 
+				  padding: 5px;             
+				  font: 14px sans-serif;        
+				  background: rgba(169, 226, 243, 0.9);//#58D3F7;   
+				  border: 0px;      
+				  border-radius: 8px;           
+				  pointer-events: none;
+				}
+			.label {
+				font-family: sans-serif;
+				font-size: 14px;
+			}
+			.title {
+				font-family: sans-serif;
+				font-size: 18px;
+				font-weight: 600;
+			}
+		
+.story p {
+				font-family: sans-serif;
+				font-size: 14px;
+				margin-left: 50px;
+		}
+		
+.disclaimer {
+		font-style: italic;
+		font-size: 12px;
+		color: #E6E6E6;
+}
+
+iframe {
+		margin-left: 400px;
+		box-shadow: 10px 10px 5px #888888
+		}
+
+.end{
+		text-align:center;
+		font-size: 12px;
+		padding-top: 1px;
+}
+		</style>
+		
+<script type="text/javascript">
+		
+//Width and height
+			var w = 1300;
+			var h = 800;
+			var padding = 80;
+			var centered = undefined;
+			
+			var dataset; // Declare global var
+			
+			d3.csv("Dataset1.csv", function(data) {
+			        
+			
+			dataset = data;
+			
+			makePlot();
+			});
+			
+
+			makePlot = function() {
+				//Create SVG element
+				
+				tooltip = d3.select("#chart").append("div")
+							.attr("class", "plan_tooltip")
+							.style("position", "absolute")
+							.style("z-index", "10")
+							.style("visibility", "hidden")
+							.text("");
+				
+				
+				var svg = d3.select("#chart")
+							.append("svg")
+							.attr("width", w)
+							.attr("height", h);
+
+
+
+			/// Set Scales and Distortions 				
+	
+				var xScale = d3.scale.linear()
+								             .domain([0, 50000])
+											 .range([padding, 1200]);
+				var yScale = d3.scale.linear()
+								             .domain([0, 25000000])
+											 .range([h-padding,padding]);
+				
+				color_scale = d3.scale.category10();
+				
+				radiusScale = d3.scale.linear()
+					.domain([d3.min(dataset, function(d) { return d['enroll']; }), d3.max(dataset, function(d) { return d['enroll']; }) ])
+					.range([5, 40]);
+
+			 // Tooltips for Dots
+                set_tooltip_label = function (d) {
+                    var company_name;
+                    tooltip.html(d.leaname + "<br><strong>No. of Students Enrolled:</strong>: " + d['enroll'] + "<br><strong>Federal School Meal Funding</strong>: " + accounting.formatMoney(d.schoolmeal, "$ ", 0) + "<br><strong>Federal School Commodities Funding</strong>: " + accounting.formatMoney(d.com, "$ ", 0) + "<br><strong>No. of Students Enrolled in Free Lunch:</strong> " + d['food']);
+                    if (!(event === undefined)) {
+                        tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px")
+                    }
+                };
+				
+				var circles = svg.selectAll("circle")
+				   .data(dataset)
+				   .enter()
+				   .append("circle")
+				   //.on("click", click)
+				   .attr("cx", function(d) {
+				   		return xScale(d['food']);
+				   })
+				   .attr("cy", function(d) {
+				   		return yScale(d['schoolmeal']);
+				   })
+				   .attr("r", function(d) {
+				   		return radiusScale(d['enroll']);
+				   })
+				  
+				   .attr("fill", function(d) {
+					return color_scale(d.localebasis)
+					})
+					.on("mouseover", function () {
+                       return tooltip.style("visibility", "visible")
+                   }).on("mousemove", function (d) {
+                       set_tooltip_label(d);
+                   }).on("mouseout", function () {
+                       tooltip.style("visibility", "hidden"); 
+                   });
+   
+
+
+				// Define X axis
+				var xAxis = d3.svg.axis()
+								  .scale(xScale)
+								  .orient("bottom")
+								  .ticks(4);
+
+				// Define Y axis
+				var yAxis = d3.svg.axis()
+								  .scale(yScale)
+								  .orient("left")
+								  .ticks(10)
+								 .tickFormat(function(d) { return "$" + d; });
+
+   			   // Create X axis
+				svg.append("g")
+					.attr("class", "x axis")
+					.attr("transform", "translate(0," + (h - padding) + ")")
+					.call(xAxis);
+				// Create Y axis
+				svg.append("g")
+					.attr("class", "y axis")
+					.attr("transform", "translate(" + padding + ",0)")
+					.call(yAxis);
+					
+				// Add Label to X Axis
+				
+				svg.append("text")
+				    .attr("class", "x label")
+				    .attr("text-anchor", "middle")
+				    .attr("x", w - w/2)
+				    .attr("y", h - padding/2)
+				    .text("Number of Students Enrolled in Free or Reduced Lunch")
+				    .attr("fill", "#045FB4");
+
+				
+				// Add label to Y Axis
+				svg.append("text")
+				    .attr("class", "y label")
+				    .attr("text-anchor", "middle")
+				    .attr("y", 90)
+					.attr("x", 0 - (h/2))
+				    .attr("dy", "1em")
+				    .attr("transform", "rotate(-90)")
+				    .text("Federal Dollars Received by Each County for the School Nutrition Program ")
+				    .attr("fill", "#045FB4");
+				
+				// Add title 
+				svg.append("text")
+					.attr("class", " title")
+					.attr("text-anchor","middle")
+					.attr("x", w/2)
+					.attr("y", padding/2)
+					.text("Federal Budget for School Nutrition Programs in 2010");
+
+
+			    // Positions the dots based on data.
+			    function position(circles) {
+			      circles .attr("cx", function(d) { return xScale(d['food']); })
+			             .attr("cy", function(d) { return yScale(d['schoolmeal']); })
+			          	.attr("r", function(d) { return radiusScale(d['enroll']); });
+			    }
+			
+//Legend
+		
+	var legend = svg.selectAll(".legend")
+      .data(color_scale.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0.5, " + i * 20 + ")"; })
+      
+       /* legend.append("rect")
+      .attr("x", w - 100)
+      .attr ("y", 293)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color_scale);
+      
+      		legend.append("text")
+      .attr("x", w - 103)
+      .attr("y", 300)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });*/
+      
+              legend.append("circle")
+      .attr("cx", w - 100)
+      .attr ("cy", 500)
+      .attr ("r", 8)
+      .style("fill", color_scale);
+      
+			svg.append("text")
+		.attr("text-anchor","middle")
+		.attr("x", w- 90)
+		.attr("y", 480)
+		.style("text-anchor", "end")
+		.text("Total Number of Students Enrolled")
+		.style("font-size", "12")
+		.style ("font-weight", "bold");
+      		
+      		legend.append("text")
+      .attr("x", w - 115)
+      .attr("y", 500)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
+      
+			svg.append("text")
+		.attr("text-anchor","middle")
+		.attr("class", "disclaimer")
+		.attr("x", 650)
+		.attr("y", 785)
+		.text("This graph shows the number of students enrolled in the Free or Reduced Lunch Program, and the federal reimbursement each school system received in 2010. Data from the New America Foundation.")
+		.attr("font-size", 15)
+		.attr("fill", "#C4C2C2");
+      
+      
+
+};
+					
+		</script>
+	</head>
+	<body>
+	
+	<div class="nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Writing</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Videos</a></li> 
+        <li><a href="#">Data Visualization</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Resume</a></li>
+    </ul>
+</div>
+
+<div class="banner">
+    <img src='https://github.com/pandapi/hyacinthempinado/blob/master/data%20banner.png?raw=true'>
+</div>
+
+<div class="headline">
+    <h1>School Lunch Prices Increase</h1>
+</div>
+		
+		
+<div id="chart"></div>
+
+
+<div class="story">
+<p>Schools across Georgia are raising their lunch prices a few cents at a time.</p>
+
+<p>The increases are due to a federal mandate that requires schools to raise lunch prices for students who do not qualify for a free or reduced lunch.</p>
+
+<p>According to the mandate released by the U.S. Department of Agriculture (USDA), schools either need to raise the prices of their meals or seek non-federal funding to ensure that schools have enough money to produce meals for students who do not qualify for a free or reduced lunch.</p>
+
+<p>The goal is to increase prices until they are equal to the federal government reimbursement for every “free” lunch served by a school.</p>
+
+<p>“We get more money for a child who’s eating free than we get for a parent who’s paying for that meal,” said Debbie Morris, nutrition director of the Jackson County School System. </p>
+
+<p>This school year, the USDA gave schools a minimum of $ 2.93 for every student who qualified for a free lunch, $ 2.53 for a reduced lunch, and $ 0.28 for a paid lunch. These rates are for schools where less than 60 percent of students qualify for a free or reduced lunch. There are slightly higher rates for schools with 60 percent or more. The maximum reimbursement rate is $ 3.16 for a free lunch, 2.76 for a reduced lunch and $ 0.42 cents for a paid lunch. </p>
+
+<p>In Jackson County, students who do not qualify for a free or reduced lunch paid $ 1.85, if they were in elementary school and $ 2.25, if they were in middle or high school. </p>
+
+<p>“It is the goal of the USDA not to have to share the burden of parents who can afford to pay for their kids [and] their meals,” Morris said. “It is the goal for the price of the meals to be equal at some point in time.“ </p>
+
+<p>Morris says her county is not alone. She says most schools have opted to increase the price gradually because parents would be facing a 50 to 60-cent increase if officials jacked the prices up all at once. </p>
+
+<p>“That would be just too much for our parents, so we’ve been doing it in small increments,” she said. </p>
+
+<p>Conyers-Rockdale County has already announced their price increase for the next school year. Middle and high school students can expect a $0.15 increase from $2.10 to $2.25, as reported by Rockdalecitizen.com. Elementary school lunch prices remain the same, as they were increased this year. </p>
+
+<p>Carroll County has also increased their lunch prices for all students by 10 cents. Next school year, elementary students will pay $ 1.95; middle school students will pay $2.10, and high school students will pay $2.35, according to the Times-Georgian. </p>
+
+<p>Playing catch-up with the federal reimbursement rates is not so easy. To complicate matters even more, the reimbursement rates increase annually, as well. </p>
+
+<p>The rates are based on the rising costs of living, according to state nutrition director Nancy Rice. </p>
+
+<p>Each year, the cost of living goes up by a couple of cents, Rice said.</p>
+
+<p>Some schools may also spend more money producing the meals than what they get from children or the government. Rice says this is another reason schools raise prices.  </p>
+
+<p>“It’s just supply and demand,” Rice says. </p>
+
+<p>However, Rice says this is not the only option. Instead of increasing prices, schools may opt to offer less fresh fruit or offer cheaper food options. For example, schools may offer chicken nuggets made from chopped meat rather than a whole muscle patty. Schools may also have to cut down on staff or cull some benefits.</p>
+
+<p>“That’s not a popular thing to do, but if you are losing money, you have to look at it and decide [they can] cut.”</p>
+
+
+</div>
+
+<div class="headline">
+    <h1>Sample Google Fusion Table</h1>
+	<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1+from+1xRJV2gFpYEy2OpWiY6q6WfSe7i9RHfRaR1ZicGE&amp;viz=MAP&amp;h=false&amp;lat=32.6539720398904&amp;lng=-82.13705439374995&amp;t=1&amp;z=6&amp;l=col1&amp;y=4&amp;tmplt=6&amp;hml=ONE_COL_LAT_LNG"></iframe>
+</div>
+<br></br>
+<br></br>
+<br></br>
+
+<div class="end">
+<p>Copyright Hyacinth Empinado</p>
+<p>2014</p>
+</div>
+	</body>
+</html>
