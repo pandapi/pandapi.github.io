@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Hope, saved on a laptop</title>
+  <meta name="description" content="How to create a parallax scrolling effect with jQuery, HTML5 and CSS">
+  <meta name="author" content="Ryan Boudreaux, TechRepublic Web Developer Blog">
+
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700&v2' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Orienta' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+
+</head>
+	
+	<style>
+
+
+
+
+.journal { 
+	height: 1000px; 
+	padding: 0; margin: 0; 
+	width: 100%; 
+	max-width: 1920px; 
+	position: relative; 
+	margin: 0 auto; 
+	border-top: 1px solid rgba(255,255,255,0.3); 
+	border-bottom: 1px solid rgba(0,0,0,0.4); 
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+#one img { margin-bottom: -780px;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#one{background-color: white;}
+
+/* Background Only */
+#two { padding: 50px 0;}
+
+
+article {
+		margin-top: 100px;
+}
+
+
+#two article {
+
+	margin-top: 500px;
+}
+
+#four article {
+
+	margin-top: 500px;
+}
+
+#nine article {
+
+	margin-top: 300px;
+}
+article p { margin-bottom: 25px;
+color: black;
+font-family: sans-serif; 
+font-size: 30px;
+margin-left: 50px;
+margin-right: 50px;
+}
+
+text { color: #8A0829;
+font-weight: bold;
+font-size: 30px;
+}
+
+.highlight2 text { color: #8A0829;
+font-weight: bold;
+font-size: 30px;
+margin-left: 50px;
+margin-right: 50px
+}
+
+.highlight p{ color: #8A0829;
+font-weight: bold;
+}
+
+.highlight li{ color: #8A0829;
+font-weight: bold;
+text-decoration: none; 
+list-style-type: none;
+font-family: sans-serif; 
+font-size: 30px;
+margin-left: 50px;
+margin-right: 50px;
+}
+
+ h1 {
+	font-size: 40px;
+}
+
+
+	h1{
+		color:#FACC2E;
+		font-family: sans-serif;
+	
+	}
+	
+	#one img{
+	margin-top: -200px;
+	}
+	
+	</style>
+	
+	</head>
+	<body>
+	
+	   <section id="one" class="journal" data-speed="5" data-type="background">
+   <img src="https://github.com/pandapi/pandapi.github.io/blob/master/Screen%20Shot%202014-05-07%20at%208.32.12%20AM.png?raw=true"/>
+   </article>
+  </section>
+  
+    <section id="two" class="journal" data-speed="5" data-type="background">
+    <article>
+
+<p>For a long time, <text class="highlight">Ann Nelson's laptop computer</text> remained dark.<p>
+</article>
+</section>
+<section id="three" class="journal" data-speed="5" data-type="background">
+    <article>
+<p>It had been returned to her family in North Dakota, along with the other <text class="highlight">belongings she left behind</text> in that great city 1,750 miles to the east. She was 30, lively, working near the very top of the World Trade Center, and — you already know.</p>
+<p>In the small town of Stanley, halfway between Minot and Williston, a fog thick enough to blur time's passing enveloped the Nelson home. Amid the many tributes to Ann, amid the grieving and the absence, it became hard to remember just when and how <text class="highlight">the laptop wound up in the basement of the one-story bank that the family owned</text>.</p>
+<p>There the laptop sat, for years, tucked away from sight in a black case. <text class="highlight">It was a Dell Inspiron 8000, bought shortly before Ann called home that day in early 2001 </text>to say she had gotten a job as a bond trader at Cantor Fitzgerald — in New York! Soon she was living near the corner of Thompson and Spring, and working in an office 104 stories in the air.</p>
+<p>Ann's parents, Jenette and Gary Nelson, say <text class="highlight">the laptop remained unopened because they are not computer savvy.</text> But it was more than that, Mrs. Nelson admits. "To tell you the truth, it was just too painful."</p>
+
+</article>
+</section>
+<section id="ten" class="journal" data-speed="5" data-type="background">
+    <article>
+
+<p>Three summers ago, during an art class Mrs. Nelson was teaching in that basement, a couple of students showed her how to use the computer. After the class, she says, "I just left it there."
+<p>Who knows why never becomes someday, and someday becomes today. One day last fall — "when I got to feeling stronger," she says — Mrs. Nelson finally <text class="highlight">opened her daughter's computer</text>. She pushed its power button and started <text class="highlight">by looking at the photographs</text> stored in its memory.</p>
+<p>Soon Mrs. Nelson was learning how to play <text class="highlight">the computer's games</text>, including solitaire and hearts. These distractions both relaxed her and reminded her of the games she used to play with Ann. Somehow, <text class="highlight">this little black machine</text> <text class="italic"> made Ann seem present, there beside her.</text></p>
+<p><text class="highlight">Getting lost in the computer </text>became part of Mrs. Nelson's after-work ritual, though she never bothered to open <text class="highlight">a file that said "Top 100"</text>; probably some music, she figured. 
+</article>
+</section>
+
+<section id="four" class="journal" data-speed="5" data-type="background">
+    <article>
+    <p>Then, two months ago and who knows why, <text class="highlight">click</text>.</p>
+</article>
+</section>
+
+<section id="five" class="journal" data-speed="5" data-type="background">
+    <article>
+<p>What she found was <text class="highlight">a catalog of goals, humanly incomplete</text>: a list that reflected a young woman's commitment to the serious, to the frivolous, to all of life. That night, Mr. and Mrs. Nelson sat down with the list, and were with their daughter again.</p>
+<ul class="highlight">
+<li>1. Be healthy/healthful.</li> 
+<li>2. Be a good friend. </li> 
+<li>3. Keep secrets. </li> 
+<li>4. Keep in touch with people I love and that love me.</li> 
+<li>5. Make a quilt.</li>
+</ul>
+<p>Mrs. Nelson used to sew all the time, until it simply became too hard to guide a needle properly with a joyous little girl frolicking in her lap. Then, when Ann grew older, mother and daughter decided to sew a tablecloth.</p>
+<p>"I don't think we ever finished," Mrs. Nelson says, laughing. "She had to be doing 100 things at a time, and consequently some of them didn't get finished."</p>
+<p>As for this goal of making a quilt, she adds, "I'm sure that I would probably have been deeply involved in this process."</p>
+</article>
+</section>
+
+<section id="six" class="journal" data-speed="5" data-type="background">
+    <article>
+
+<ul class="highlight"><li>6. Nepal.</li><li> 7. Buy a home in North Dakota. </li><li> 8. Get a graduate degree. </li><li> 9. Learn a foreign language. </li><li> 10. Kilimanjaro. </li><li> 11. Never be ashamed of who I am.</li></ul>
+<p>"Ann was in many environments where being a girl from North Dakota may not have been the most sophisticated label to wear," Mrs. Nelson says, recalling that her daughter had traveled to China and to Peru, and had worked in the high-powered environments of Chicago and New York.</p>
+<p>Even so, Ann always conveyed pride in who she was, who her parents were and where they came from — though never in a boastful way. "It's an important point about her personality," her mother says.</p>
+</article>
+</section>
+
+<section id="six" class="journal" data-speed="5" data-type="background">
+    <article>
+<ul class="highlight"><li>12. Be a person to be proud of. </li><li> 13. Always keep improving. </li><li> 14. Read every day. </li><li> 15. Be informed. </li><li> 16. Knit a sweater. </li><li> 17. Scuba-dive in the Barrier Reef. </li><li> 18. Volunteer for a charity. </li><li> 19. Learn to cook.</li></ul>
+<p>By her late 20's, Ann had actually become a fairly decent cook. Still, her mother laughs in recalling late-night calls, like the one that began: "Mom, what's drawn butter?"
+</article>
+</section>
+
+<section id="seven" class="journal" data-speed="5" data-type="background">
+    <article>
+
+<p> <ul class="highlight"><li> 20. Learn about art. </li><li> 21. Get my C.F.A. </li><li> 22. Grand Canyon. </li><li> 23. Helicopter-ski with my dad.</li></ul></p>
+<p> Then Ann Nelson's list <text class="highlight">repeats a number.</p>
+ <ul class="highlight"><li>23. Spend more time with my family. </li><li> 24. Remember birthdays!!!!</li></ul>
+<p>Birthdays loomed large in Ann's life. She would celebrate her birthday not for a day, but for a week — in part because her father's birthday came the very next day, in part because she was proud to have been born on Norwegian Independence Day — which is May 17, today.</p>
+<p>"Ann would have been 35," says Mr. Nelson, who turns 65 tomorrow.</p>
+</article>
+</section>
+<section id="eight" class="journal" data-speed="5" data-type="background">
+    <article>
+ <ul class="highlight"><li> 25. Appreciate money, but don't worship it. </li><li> 26. Learn how to use a computer. </li><li> 27. Visit the New York Public Library. </li><li> 28. Maine. </li><li> 29. Learn to write. </li><li> 30. Walk — exercise but also see the world firsthand. </li><li> 31. Learn about other cultures.</li><li>  32. Be a good listener. </li><li> 33. Take time for friends.</li><li>  34. Kayak.</li><li>  35. Drink water. </li><li> 36. Learn about wine.</li></ul>
+<p>Ann was supposed to attend a wine class the evening of Sept. 11, in keeping with Nos. 13, 19, 31, 36 — the whole list, really.</p>
+<p> <text class="highlight2">After 36, there is a 37, but it is blank.</text></p>
+</article>
+</section>
+<section id="nine" class="journal" data-speed="5" data-type="background">
+    <article>
+<p><text class= "highlight2"> Mr. Nelson reads the list as an inventory of his daughter's values.</text></p>
+<p>"You don't see any Corvettes in the garage or any of those material things you might expect from someone that age," he says. "She recognized that you appreciate a few things and kind of live your life wisely."</p>
+<p>Mrs. Nelson <text class="highlight">interprets the list as another way in which Ann seems to communicate with her</text> when she is most in need. So, just about every day in a small North Dakota town, halfway between Minot and Williston, the screen of a laptop computer goes from darkness to light.</p>
+    </article>
+  </section>
+	
+	
+	
+	
+	
+	</body>
+	</html>
