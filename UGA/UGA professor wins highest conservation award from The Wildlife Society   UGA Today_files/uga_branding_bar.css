@@ -1,0 +1,156 @@
+/**************************************/
+/*          QUICKLINKS PANEL          */
+/**************************************/
+
+#quicklinks-panel {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	left: 0;
+	}
+
+#quicklinks-panel > div {
+	text-align: left;
+	}
+
+/**************************************/
+/*           UGA QUICKLINKS           */
+/**************************************/
+
+#uga-quicklinks {
+	background: #000;
+	display: none;
+	position: relative;
+	z-index: 101;
+	}
+
+#uga-quicklinks ul {
+	z-index: 10001;
+	position: relative;
+	}
+
+#uga-quicklinks ul li {
+	float: left;
+	margin-right: 10px;
+	padding: 2em 0;
+	}
+
+#uga-quicklinks ul li.last {
+	margin-right: 0;
+	}
+
+#uga-quicklinks ul li dl {
+	padding: 0 2em;
+	border-left: solid 1px #333;
+	}
+
+#uga-quicklinks ul li dl.last {
+	border-right: solid 1px #333;
+	}
+
+#uga-quicklinks ul li dl dt {
+	color: #ccc;
+	font-size: 1.2em;
+	font-family: Helvetica, Arial, sans-serif;
+	margin-bottom: .5em;
+	}
+
+#uga-quicklinks ul li dl dd a {
+	font-size: 1.1em;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	text-decoration: none;
+	line-height: 1.8em;
+	display: block;
+	}
+
+#uga-quicklinks ul li dl dd a:hover {
+	color: #999;
+	}
+
+/**************************************/
+/*               UGA BAR              */
+/**************************************/
+
+#uga-bar {
+	background: url(../img/uga_branding_bg.jpg) #000 repeat-x;
+	height: 30px;
+	position: relative;
+	z-index: 102;
+	}
+
+#uga-bar #uga-bar-logo {
+	text-indent: -9999px;
+	}
+
+#uga-bar #uga-bar-logo p {
+	background: url(../img/uga_branding_logo.png) transparent no-repeat;
+	height: 30px;
+	width: 340px;
+	}
+
+#uga-bar #uga-bar-logo p a {	
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	}
+
+#uga-bar #quicklinks {
+	height: 20px;
+	margin: 5px;
+	}
+
+#uga-bar #quicklinks a {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	font-family: Franklin Gothic Medium, Arial Narrow Bold, Arial, sans-serif;
+	text-decoration: none;
+	color: #d8d8d8;
+	font-size: 1.3em;
+	display: none;	
+	line-height: 18px;
+	color: #ccc;
+	padding: 0 20px 0 12px;
+	border: solid 1px;
+	border-color: #3f3f3f #363636 #444444;
+	background-image: url(../img/quicklinks_arrows.png);
+	background-color: #3c3c3c;
+	background-position: 84px -26px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	}
+
+#cse-search-box
+{
+	border: 1px solid #C1C2C4;
+	width:249px;
+	height:15px;
+	float:right;
+	margin-top:6px;
+	margin-right:7px;
+}
+#search-uga-input
+{
+	height:15px;
+	padding:0 8px;
+	width:215px;
+	float:left;
+	border:none;
+	color:#888888;
+	text-align:right;
+}
+#cse-search-box input[type="submit"]
+{
+	width:18px;
+	height:15px;
+	background-image:url('/img/topsearch_submit.gif');
+	background-position:top left;
+	background-repeat:no-repeat;
+	padding:0;
+	border:none;
+	float:right;
+	cursor:pointer;
+	cursor:hand;
+}
