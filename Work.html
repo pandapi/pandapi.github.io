@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+		<title>About</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
+		<style type="text/css">
+		
+body{ 
+    background-image: url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Background/background.png?raw=true');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.header {
+ margin-top: 0px;
+ margin-left: 500px;
+ width: 450px;
+ height:450px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
+ background-position: absolute;
+ display: block;
+ background-size: 300px, 250px;
+ background-repeat: no-repeat;
+}
+
+
+.contact{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -260px;
+    margin-left: 700px;
+    background-position: absolute;
+    display: block;
+}
+
+.contact:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -260px;
+    margin-left: 700px;
+    background-position: absolute;
+    display: block;
+}
+
+.about{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 480px;
+    background-position: absolute;
+    display: block;
+}
+
+/**.about:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Text%20Underline.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 480px;
+    background-position: absolute;
+    display: block;
+}**/
+
+.work{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 590px;
+    background-position: absolute;
+    display: block;
+}
+
+.work:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 590px;
+    background-position: absolute;
+    display: block;
+}
+
+.stories {
+ margin-top: 0px;
+ margin-left: 250px;
+ width: 450px;
+ height:450px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Home%20Page/Work.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 400px 380px;
+ background-repeat: no-repeat;
+ z-index: 2;
+background-position: absolute;
+}
+
+.stories:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+
+.videos {
+ margin-top: -170px;
+ margin-left: 140px;
+ width: 450px;
+ height:450px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Home%20Page/About.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 400px 370px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
+}
+
+.videos:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+.data {
+ margin-top: -480px;
+ margin-left: 430px;
+ width: 450px;
+ height:450px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Home%20Page/Contact.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 270px 250px;
+ background-repeat: no-repeat;
+ z-index: 4;
+  background-position: absolute;
+  display: block;
+}
+
+.data:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+
+		</style>
+	</head>
+	<body>
+	
+	<div class = "header">
+	</div>
+	
+	<div class = "nav">
+
+	<a href="Contact.html" class="contact" title="Contact"></a>
+	<a href="Work.html" class="work" title="Work"></a>
+	
+	</div>
+	
+	<div class="about" title="About"></div>
+	
+	<div class="work">
+ <a href="Work.html" class="stories" "title="Stories"></a>
+<!--<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Home%20Page/Work.png?raw=true' style="position: absolute; top: 10px; left: 250px; z-index: 2; width:400px; height:380px">-->
+</div>
+
+
+<a href="About.html" class="videos" title="Videos and Animation"></a>
+<!--<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Home%20Page/About.png?raw=true'  style="position: absolute; top: 280px; left: 150px; z-index: 3; width:380px; height:360px">-->
+
+
+<a href="Contact.html" class="data" title="Data Visualizations"></a>
+<!--<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Home%20Page/Contact.png?raw=true'  style="position: absolute; top: 300px; left: 450px; z-index: 4;width:270px; height:250px">-->
+</div>
+	
+	</body>
+</html>
