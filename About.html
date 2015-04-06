@@ -7,20 +7,49 @@
 		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
 		<style type="text/css">
 		
-		body{ 
+body{ 
     background-image: url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Background/background.png?raw=true');
     background-position: center center;
     background-repeat: repeat;
     background-size: cover;
 }
 
-.nav ul {
-	font-family: "Arial", sans-serif;
-	list-style-type: none;
+.header {
+ margin-top: 0px;
+ margin-left: 500px;
+ width: 450px;
+ height:450px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Top%20Logo.png?raw=true');
+ background-position: absolute;
+ display: block;
+ background-size: 300px, 250px;
+ background-repeat: no-repeat;
 }
 
-.text {
-	font-family: "Arial", sans-serif;
+.contact a:link{
+    color: #363636;
+    font-weight: bold;
+    padding: 15px;
+    font-family: 'Shift', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    background: url ('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Contact%20Text%20No%20Underline.png?raw=true');
+}
+
+.nav a:visited{
+    text-decoration: none;
+    color: #363636;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+	color: #363636;
+}
+
+.nav ul{
+    margin-left: 210px;
+    list-style-type: none;
+    display: inline;
 }
 
 		</style>
@@ -28,14 +57,14 @@
 	<body>
 	
 	<div class = "header">
-	<img src="https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Top%20Logo.png?raw=true" style="position: center; top: 300px; left: 450px;;width:300px; height:200px">
 	</div>
+	
 	<div class = "nav">
 		<ul>
 	
-		<li>About</li>
-		<li>Work</li>
-		<li>Contact</li>
+		<li><a href = # class="about" "title="About">About</a></li>
+		<li><a href = # class="work" "title="Work">Work</a></li>
+		<li><a href = # class="contact" "title="Contact">Contact</a></li>
 
 		</ul>
 	</div>
