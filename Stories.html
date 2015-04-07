@@ -113,6 +113,20 @@ body{
 	text-decoration: none;
 }
 
+.box1:hover{
+    position: relative;
+}
+
+.box1:hover:after {
+    content: url(https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Read%20the%20story.png?raw=true); /* no need for qoutes */
+    display: block;
+    position: absolute;
+    left: 0px; /* change this value to one that suits you */
+    top: -300px; /* change this value to one that suits you */
+    width: 10px;
+    height: 10px;
+    }
+
 .news img{
 	margin-left: -290px;
 	margin-bottom: 10px;
@@ -121,6 +135,7 @@ body{
 .tiles {
 	margin-top: 80px;
 }
+
 
 		</style>
 	</head>
@@ -142,15 +157,14 @@ body{
 	
 	<div class = "tiles">
 
-<div class="news" id="narticle1">
-       <a href='http://www.georgiahealthnews.com/2014/01/shade-obesity-research-uga/'>
+<div class="news">
+<a href="http://www.georgiahealthnews.com/2014/01/shade-obesity-research-uga/" class="box1">
    <svg width="300" height="300">
    <text x="20" y="50" fill="white">'A new shade of obesity</text>
     <text x="20" y="75" fill="white">research at UGA'</text>
      <text x="20" y="95" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
       <img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/obesity.png?raw=true'width="280" height="160"/>
-</svg>
-
+ 
  <a href='http://www.georgiahealthnews.com/2014/05/home-cooking-georgia-schools-put-emphasis-locally-grown-lunches/'>
    <svg width="300" height="300">
    <text x="20" y="40" fill="white">'Home Cooking: Schools </text>
@@ -158,8 +172,7 @@ body{
     <text x="20" y="90" fill="white"> locally grown lunches'</text>
      <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
       	<img src='https://raw.githubusercontent.com/pandapi/hyacinthempinado/master/news%20images/Home%20cooking.jpg'width="280" height="160">
-      	
-             <a href='http://www.georgiahealthnews.com/2014/02/navigator-program-avoid-controversy/'>
+<a href='http://www.georgiahealthnews.com/2014/02/navigator-program-avoid-controversy/'>
    <svg width="300" height="300">
    <text x="20" y="40" fill="white">'Navigator program </text>
     <text x="20" y="65" fill="white">tries to avoid</text>
@@ -208,7 +221,7 @@ body{
      <text x="20" y="135" fill="white" font-style="italic" font-size="12px">UGA Today</text>
       	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Screen%20Shot%202015-04-06%20at%2010.45.37%20PM.png?raw=true'width="280" height="140"/>
       	           
-      </div>
+</div>
       
 	
 	<!--<div class = "sciencearticles">
