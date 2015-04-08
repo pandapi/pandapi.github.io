@@ -2,76 +2,17 @@
 <html lang="en">
   <head>
   	<meta charset="utf-8">
-		<title>Federal School Budget Funding</title>
+		<title>Hyacinth's Work</title>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://raw.githubusercontent.com/openexchangerates/accounting.js/master/accounting.min.js"></script>
 		<style type="text/css">
 		
-		body{ 
-    background-image: url('https://raw.githubusercontent.com/pandapi/hyacinthempinado/master/background%20copy.png');
+body{ 
+    background-image: url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Background/background.png?raw=true');
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
-
-.nav li {
-    float: left;
-    
-}
-
-.nav a:link{
-    color: #FFFFFF;
-    display: inline;
-    font-weight: bold;
-    padding: 15px;
-    font-family: 'Shift', sans-serif;
-    background-color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.nav a:visited{
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.nav a:hover{
-    background-color: #7CD7DE;
-    text-decoration: none;
-	color: #FFFFFF;
-}
-
-.nav ul{
-    margin-left: 210px;
-    list-style-type: none;
-}
-
-
-.banner img{
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-top: 40px;
-    margin-left: -20px;
-}
-
-h1{
-    text-align: center;
-    font-family: 'Shift', sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-			.axis path,
-			.axis line {
-				fill: none;
-				stroke: #A9E2F3;
-				shape-rendering: crispEdges;
-			}
-
-			.axis text {
-				font-family: sans-serif;
-				font-size: 14px;
-			}
 
 body {
   font: 10px sans-serif;
@@ -89,11 +30,12 @@ body {
 				  // height: 28px;                 
 				  padding: 5px;             
 				  font: 14px sans-serif;        
-				  background: rgba(169, 226, 243, 0.9);//#58D3F7;   
+				  background: rgba(169, 226, 243, 0.9);//#ffffff;   
 				  border: 0px;      
 				  border-radius: 8px;           
 				  pointer-events: none;
 				}
+				
 			.label {
 				font-family: sans-serif;
 				font-size: 14px;
@@ -102,14 +44,94 @@ body {
 				font-family: sans-serif;
 				font-size: 18px;
 				font-weight: 600;
+				color: black;
 			}
-		
-.story p {
-				font-family: sans-serif;
-				font-size: 14px;
-				margin-left: 50px;
-		}
-		
+
+
+.header {
+ margin-top: 0px;
+ margin-left: 500px;
+ width: 450px;
+ height:450px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
+ background-position: static;
+ display: block;
+ background-size: 300px, 250px;
+ background-repeat: no-repeat;
+}
+
+.about{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -280px;
+    margin-left: 480px;
+    background-position: relative;
+    display: block;
+}
+
+.about:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -280px;
+    margin-left: 480px;
+    background-position: relative;
+    display: block;
+}
+
+.work{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 590px;
+    background-position: relative;
+    display: block;
+}
+
+.work:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 590px;
+    background-position: relative;
+    display: block;
+}
+
+.contact{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 700px;
+    background-position: relative;
+    display: block;
+}
+
+.contact:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: -100px;
+    margin-left: 700px;
+    background-position: relative;
+    display: block;
+}
+
 #disclaimer p {
 		font-style: italic;
 		font-size: 12px;
@@ -130,35 +152,55 @@ body {
 		text-decoration: none;
 }
 
-iframe {
-		margin-left: 400px;
-		box-shadow: 10px 10px 5px #888888;
-		}
 
-.tile{
-	margin-left: 30px;
-	}
-	
-.For {
-	color: gray; 
-	margin-left: 50px;
-	font-size: 12px;
-	font-style: italic;
-	
+//*.back{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+ 	margin-top: 100px;
+    margin-left: 0px;
+    background-position: absolute;
+    display: block;
+    z-index: 3;
+    
 }
 
-.For a:link{
-	color: gray;
+.back:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/BacktoworkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+ 	margin-top: 100px;
+    margin-left: 0px;
+    background-position: absolute;
+    display: block; 
+    z-index: 3;
 }
-	
-.end{
-		text-align:center;
-		font-size: 12px;
-		padding-top: 1px;
+
+.home{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: 0px;
+    margin-left: 0px;
+    background-position: absolute;
+    display: block;
+
+}
+
+.home:hover{
+	opacity: 0.5;//
 }
 		</style>
 		
-<script type="text/javascript">
+		<script type="text/javascript">
+		
+		
 		
 //Width and height
 			var w = 1300;
@@ -180,7 +222,7 @@ iframe {
 			makePlot = function() {
 				//Create SVG element
 				
-				tooltip = d3.select("#chart").append("div")
+				var tooltip = d3.select("#chart").append("div")
 							.attr("class", "plan_tooltip")
 							.style("position", "absolute")
 							.style("z-index", "10")
@@ -258,13 +300,15 @@ iframe {
 								  .scale(yScale)
 								  .orient("left")
 								  .ticks(10)
-								 .tickFormat(function(d) { return "$" + d; });
+								  .tickFormat(function(d) { return "$" + d; });
 
    			   // Create X axis
 				svg.append("g")
 					.attr("class", "x axis")
-					.attr("transform", "translate(0," + (h - padding) + ")")
+					.attr("transform", "translate(-6," + (h - padding) + ")")
+					.attr("y", 2)
 					.call(xAxis);
+					
 				// Create Y axis
 				svg.append("g")
 					.attr("class", "y axis")
@@ -359,100 +403,30 @@ iframe {
 					
 		</script>
 	</head>
-	<body>
 	
-	<div class="nav">
-   <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About</a></li>
-        <li><a href="Writings.html">Writing</a></li>
-        <li><a href="Photos.html">Photos</a></li>
-        <li><a href="Videos.html">Videos</a></li> 
-        <li><a href="Data.html">Data Visualization</a></li>
-        <li><a href="Resume.html">Résumé</a></li>
-    </ul>
-</div>
-
-<div class="banner">
-    <img src='https://github.com/pandapi/hyacinthempinado/blob/master/data%20banner.png?raw=true'>
-</div>
-
-<div class="headline">
-    <h1>School Lunch Prices Increase</h1>
-</div>
-		
-		
-<div id="chart"></div>
-
-<div id="disclaimer">
+	<body>
+ 
+	<div class = "header">
+	</div>
+	
+	<div class = "nav">
+	<a href="About.html" class="about" title="About">
+	<a href="Work.html" class="work" title="Work"></a>
+	<a href="Contact.html" class="contact" title="Contact"></a>
+	</div>
+	
+	<div>
+	<div>
+	<a href="index.html" class="home" title="Homepage"></a>
+	    <a href="Work.html" class="back" title="work"></a>
+	</div>
+	
+	<div id="chart"></div>
+	
+	<div id="disclaimer">
 <p>The amount of federal reimbursement a district receives depends on the number of students enrolled in the Free and Reduced Lunch program:  This graph shows the number of students enrolled in the Free or Reduced Lunch Program, and the federal reimbursement each school system received for the meals served through that program in 2010. The size of the circles indicate the total number of students enrolled in the school system, and the colors indicate the school system's locale type based on population density and geographic area. Data from the New America Foundation and the U.S. Department of Agriculture. D3 Code was modified from The Future Advisor Blog. Visit them here: <a href="http://blog.futureadvisor.com/401k-fees-are-determined-by-hr-negotiation-skills/">http://blog.futureadvisor.com/401k-fees-are-determined-by-hr-negotiation-skills/</a>.</p>
 </div>
+	
 
-<div class="story">
-<p>Schools across Georgia are raising their lunch prices a few cents at a time.</p>
-
-<p>The increases are due to a federal mandate that requires schools to raise lunch prices for students who do not qualify for a free or reduced lunch.</p>
-
-<p>According to the mandate released by the U.S. Department of Agriculture (USDA), schools either need to raise the prices of their meals or seek non-federal funding to ensure that schools have enough money to produce meals for students who do not qualify for a free or reduced lunch.</p>
-
-<p>The goal is to increase prices until they are equal to the federal government reimbursement for every “free” lunch served by a school.</p>
-
-<p>“We get more money for a child who’s eating free than we get for a parent who’s paying for that meal,” said Debbie Morris, nutrition director of the Jackson County School System. </p>
-
-<p>This school year, the USDA gave schools a minimum of $ 2.93 for every student who qualified for a free lunch, $ 2.53 for a reduced lunch, and $ 0.28 for a paid lunch. These rates are for schools where less than 60 percent of students qualify for a free or reduced lunch. There are slightly higher rates for schools with 60 percent or more. The maximum reimbursement rate is $ 3.16 for a free lunch, 2.76 for a reduced lunch and $ 0.42 cents for a paid lunch. The total amount of money each system receives depends on the head count of students in either free, reduced or paid lunch. </p>
-
-<p>In Jackson County, students who do not qualify for a free or reduced lunch paid $ 1.85, if they were in elementary school and $ 2.25, if they were in middle or high school. </p>
-
-<p>“It is the goal of the USDA not to have to share the burden of parents who can afford to pay for their kids [and] their meals,” Morris said. “It is the goal for the price of the meals to be equal at some point in time.“ </p>
-
-<p>Morris says her county is not alone. She says most schools have opted to increase the price gradually because parents would be facing a 50 to 60-cent increase if officials jacked the prices up all at once. </p>
-
-<p>“That would be just too much for our parents, so we’ve been doing it in small increments,” she said. </p>
-
-<p>Conyers-Rockdale County has already announced their price increase for the next school year. Middle and high school students can expect a $0.15 increase from $2.10 to $2.25, as reported by Rockdalecitizen.com. Elementary school lunch prices remain the same, as they were increased this year. </p>
-
-<p>Carroll County has also increased their lunch prices for all students by 10 cents. Next school year, elementary students will pay $ 1.95; middle school students will pay $2.10, and high school students will pay $2.35, according to the Times-Georgian. </p>
-
-<p>Playing catch-up with the federal reimbursement rates is not so easy. To complicate matters even more, the reimbursement rates increase annually, as well. </p>
-
-<p>The rates are based on the rising costs of living, according to state nutrition director Nancy Rice. </p>
-
-<p>Each year, the cost of living goes up by a couple of cents, Rice said.</p>
-
-<p>Some schools may also spend more money producing the meals than what they get from children or the government. Rice says this is another reason schools raise prices.  </p>
-
-<p>“It’s just supply and demand,” Rice says. </p>
-
-<p>However, Rice says this is not the only option. Instead of increasing prices, schools may opt to offer less fresh fruit or offer cheaper food options. For example, schools may offer chicken nuggets made from chopped meat rather than a whole muscle patty. Schools may also have to cut down on staff or cull some benefits.</p>
-
-<p>“That’s not a popular thing to do, but if you are losing money, you have to look at it and decide [they can] cut.”</p>
-
-</div>
-<div class="For">
-<p> For more information on how I did the graph, please download my methods <a href="Methods.docx">here</a>.</p>
-</div>
-
-<div class="headline">
-    <h1>Sample Google Fusion Table</h1>
-	<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1+from+1xRJV2gFpYEy2OpWiY6q6WfSe7i9RHfRaR1ZicGE&amp;viz=MAP&amp;h=false&amp;lat=32.6539720398904&amp;lng=-82.13705439374995&amp;t=1&amp;z=6&amp;l=col1&amp;y=4&amp;tmplt=6&amp;hml=ONE_COL_LAT_LNG"></iframe>
-</div>
-
-
-    <h1>Sample TileMill</h1>
-<div class="tile">
-
-<iframe width="30%" height="300px" frameBorder="0" src="http://a.tiles.mapbox.com/v3/pandapi.Map.html"></iframe>
-<iframe width="100%" height="500px" frameBorder="0" src="https://a.tiles.mapbox.com/v4/pandapi.CVR.html?access_token=pk.eyJ1IjoicGFuZGFwaSIsImEiOiJZbEtyWGtZIn0.Wvp-FFIHUGmV_pwcAM_M_Q"></iframe>
-
-
-</div>
-<br></br>
-<br></br>
-<br></br>
-
-<div class="end">
-<p>Copyright Hyacinth Empinado</p>
-<p>2014</p>
-</div>
 	</body>
 </html>
