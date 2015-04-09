@@ -23,8 +23,10 @@ body {
 			circle:hover {
 			  fill-opacity: 0.9;
 			}
-			.plan_tooltip {   
- 				 position: absolute;           
+			.plan_tooltip {  
+			    margin-top: 150px;
+			    margin-left: 150px; 
+ 				 position: relative;           
 				  text-align: center;           
 				  // width: 60px;                  
 				  // height: 28px;                 
@@ -32,8 +34,9 @@ body {
 				  font: 14px sans-serif;        
 				  background: rgba(169, 226, 243, 0.9);//#ffffff;   
 				  border: 0px;      
-				  border-radius: 8px;           
+				  border-radius: 0px;           
 				  pointer-events: none;
+				  
 				}
 				
 			.label {
@@ -158,14 +161,14 @@ body {
 }
 
 
-//*.back{
+.back{
     background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
 	background-repeat: no-repeat;
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: 100px;
-    margin-left: 0px;
+ 	margin-top: -10px;
+    margin-left: 550px;
     background-position: absolute;
     display: block;
     z-index: 3;
@@ -178,8 +181,8 @@ body {
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: 100px;
-    margin-left: 0px;
+ 	margin-top: -10px;
+    margin-left: 550px;
     background-position: absolute;
     display: block; 
     z-index: 3;
@@ -191,8 +194,8 @@ body {
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: 0px;
-    margin-left: 0px;
+ 	margin-top: 100px;
+    margin-left: 600px;
     background-position: absolute;
     display: block;
 
@@ -262,7 +265,6 @@ body {
                     var company_name;
                     tooltip.html(d.leaname + "<br><strong>No. of Students Enrolled:</strong>: " + d['enroll'] + "<br><strong>Federal School Meal Funding</strong>: " + accounting.formatMoney(d.schoolmeal, "$ ", 0) + "<br><strong>Federal School Commodities Funding</strong>: " + accounting.formatMoney(d.com, "$ ", 0) + "<br><strong>No. of Students Enrolled in Free Lunch:</strong> " + d['food']);
                     if (!(event === undefined)) {
-                        tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px")
                     }
                 };
 				
@@ -328,7 +330,7 @@ body {
 				    .attr("x", w - w/2)
 				    .attr("y", h - padding/2)
 				    .text("Number of Students Enrolled in Free or Reduced Lunch")
-				    .attr("fill", "#045FB4");
+				    .attr("fill", "#000000");
 
 				
 				// Add label to Y Axis
@@ -340,7 +342,7 @@ body {
 				    .attr("dy", "1em")
 				    .attr("transform", "rotate(-90)")
 				    .text("Federal Dollars Received by Each County for the School Nutrition Program ")
-				    .attr("fill", "#045FB4");
+				    .attr("fill", "#000000");
 				
 				// Add title 
 				svg.append("text")
@@ -424,10 +426,7 @@ body {
 	<div class="D3banner">
 	<img src="https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/D3%20Banner.png?raw=true" style = "position: absolute; top: 240px; left: 490px; bottom: 50px; width: 350px; height: 120px"/>
 	</div>
-	<div>
-	<a href="index.html" class="home" title="Homepage"></a>
-	    <a href="Work.html" class="back" title="work"></a>
-	</div>
+
 	
 	<div id="chart" style= "position: absolute; top: 380px;"></div>
 	
@@ -438,6 +437,11 @@ body {
 	<div class="Tilemillbanner">
 	<img src="https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Tilemill.png?raw=true" style = "position: absolute; top: 1300px; left: 490px; bottom: 50px; width: 350px; height: 120px"/>
 	<iframe width="500px" height="500px" frameBorder="0" src="https://a.tiles.mapbox.com/v4/pandapi.CVR.html?access_token=pk.eyJ1IjoicGFuZGFwaSIsImEiOiJZbEtyWGtZIn0.Wvp-FFIHUGmV_pwcAM_M_Q"></iframe>
+	</div>
+	
+		<div>
+	<a href="index.html" class="home" title="Homepage"></a>
+	    <a href="Work.html" class="back" title="work"></a>
 	</div>
 
 	
