@@ -120,11 +120,37 @@ body{
     margin-left: 600px;
     background-position: absolute;
     display: block;
-
+    }
+    
+.group:hover{
+	width: 200px;
+	opacity: 0.5;
 }
 
-.home:hover{
-	opacity: 0.5;//
+.back{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ReturnHome.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 150px;
+ 	height:100px;
+ 	margin-top: -25px;
+    margin-left: 550px;
+    background-position: absolute;
+    display: block;
+    z-index: 3;  
+}
+
+.back:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ReturnHomeU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 150px;
+ 	height:100px;
+ 	margin-top: -25px;
+    margin-left: 550px;
+    background-position: absolute;
+    display: block; 
+    z-index: 3;
 }
 
 
@@ -154,8 +180,10 @@ body{
 	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png?raw=true" style="width:400px;height:480px">
 	</div>
 	
+	<div class="group">
 	<a href="index.html" class="home" title="Homepage"></a>
-
+    <a href="index.html" class="back" title="Return Home"></a>
+	</div>
 	
 	</body>
 </html>
