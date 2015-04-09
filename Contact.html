@@ -84,33 +84,110 @@ body{
     margin-left: 700px;
     background-position: relative;
     display: block;
+    opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-.contact:hover{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
- 	margin-top: -100px;
-    margin-left: 700px;
-    background-position: relative;
-    display: block;
+.email {
+ margin-top: 0px;
+ margin-left: 280px;
+ width: 550px;
+ height: 550px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Email.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 370px 350px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
 }
 
-p{
-	text-align: center;
-	font-size: 30px;
-	font-family: sans-serif;
-	background-color: black;
-	color: white;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 500px;
-	position: center;
-	
+.email:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+.resume {
+ margin-top: -550px;
+ margin-left: 650px;
+ width: 550px;
+ height:550px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Resume.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 370px 350px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
+}
+
+.resume:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+.linkedin{
+ margin-top: -180px;
+ margin-left: 680px;
+ width: 60px;
+ height:60px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/linkedin%20icon.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 52px 45px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
+}
+
+.linkedin:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.twitter{
+ margin-top: -60px;
+ margin-left: 630px;
+ width: 60px;
+ height:60px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/twitter%20icon.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 52px 45px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
+}
+
+.twitter:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.youtube{
+ margin-top: -60px;
+ margin-left: 580px;
+ width: 60px;
+ height:60px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/youtube%20icon.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 52px 45px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
+}
+
+.youtube:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .back{
@@ -119,8 +196,8 @@ p{
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: -25px;
-    margin-left:  550px;
+ 	margin-top: -20px;
+    margin-left:  555px;
     background-position: absolute;
     display: block;
     
@@ -132,8 +209,8 @@ p{
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: -25px;
-    margin-left: 550px;
+ 	margin-top: -20px;
+    margin-left: 555px;
     background-position: absolute;
     display: block;
 }
@@ -144,8 +221,8 @@ p{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: 600px;
-    margin-left: 600px;
+ 	margin-top: 0px;
+    margin-left: 605px;
     background-position: absolute;
     display: block;
 
@@ -165,20 +242,23 @@ p{
 	<div class = "nav">
 	<a href="About.html" class="about" title="About">
 	<a href="Work.html" class="work" title="Work"></a>
-	<a href="Contact.html" class="contact" title="Contact"></a>
+	<div class="contact" title="Contact"></div>
 	</div>
 	
 	<div class = "links">
-	<p>Send an email</p>
-	<p>Download resume</p>
+	<a href="mailto:hempinado@gmail.com" class="email" "title="Send an Email"></a>
+	<a href="Videos.html" class="resume" title="Download Resume"></a>
+	</div>
 	
-	
+	<div class="social">
+	<a href="https://www.linkedin.com/profile/view?id=299611463&trk=nav_responsive_tab_profile" class="linkedin" "title="LinkedIn"></a>
+	<a href="https://twitter.com/sayhitohyacinth" class="twitter" title="Twitter"></a>
+	<a href="https://www.youtube.com/channel/UC1tDygRmzEK_O3B5ngSzttA/videos" class="youtube" title="YouTube"></a>
 	</div>
 	
 	<div>
-	<div>
 	<a href="index.html" class="home" title="Homepage"></a>
-	    <a href="Work.html" class="back" title="work"></a>
+	<a href="Work.html" class="back" title="work"></a>
 	</div>
 	
 
