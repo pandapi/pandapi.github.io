@@ -61,6 +61,8 @@ body{
     margin-left: 480px;
     background-position: absolute;
     display: block;
+    opacity: 0.5;
+ 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 /**.about:hover{
@@ -108,6 +110,22 @@ body{
 	margin-top: -60px;
 }
 
+.home{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: 0px;
+    margin-left: 600px;
+    background-position: absolute;
+    display: block;
+
+}
+
+.home:hover{
+	opacity: 0.5;//
+}
 
 
 		</style>
@@ -132,9 +150,12 @@ body{
 	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Boxy.png?raw=true" style="width:500px;height:500px">
 	</div>
 	
-		<div class="left">
+	<div class="left">
 	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png?raw=true" style="width:400px;height:480px">
 	</div>
+	
+	<a href="index.html" class="home" title="Homepage"></a>
+
 	
 	</body>
 </html>
