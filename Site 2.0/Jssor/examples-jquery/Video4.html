@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyacinth's Videos</title>
-</head>
-<style type="text/css">
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+		<title>Hyacinth's Work</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
+		<style type="text/css">
 		
 body{ 
     background-image: url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Background/background.png?raw=true');
@@ -14,11 +14,25 @@ body{
     background-size: cover;
 }
 
+#center {
+	width:  1000px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+#nav{
+	width: 310px; 
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: -80px;
+}
+
 .header {
- margin-top: 0px;
- margin-left: 500px;
- width: 450px;
- height:450px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 300px;
+ height:250px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
  background-position: static;
  display: block;
@@ -32,10 +46,10 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -280px;
-    margin-left: 480px;
+ 	margin-left: auto;
+    margin-right: auto;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .about:hover{
@@ -44,10 +58,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -280px;
-    margin-left: 480px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .work{
@@ -56,10 +68,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .work:hover{
@@ -68,10 +78,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .contact{
@@ -80,10 +88,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 700px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .contact:hover{
@@ -92,31 +98,10 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 700px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
-.stories {
- margin-top: 0px;
- margin-left: 140px;
- width: 450px;
- height:450px;
- background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Stories.png?raw=true');
-    filter: none;
-  -webkit-filter: grayscale(0%);
- background-size: 270px 250px;
- background-repeat: no-repeat;
- z-index: 3;
- background-position: absolute;
- display: block;
-}
-
-.stories:hover {
- opacity: 0.5;
- filter: alpha(opacity=50); /* For IE8 and earlier */
-}
 
 .back{
     background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
@@ -124,9 +109,10 @@ body{
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: -20px;
-    margin-left: 540px;
-    background-position: relative;
+ 	margin-top:-10px;
+	margin-left: auto;
+    margin-right: auto;
+    background-position: absolute;
     display: block;
     
 }
@@ -137,9 +123,10 @@ body{
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: -20px;
-    margin-left: 540px;
-    background-position: relative;
+ 	margin-top:-10px;
+	margin-left: auto;
+    margin-right: auto;
+    background-position: absolute;
     display: block;
 }
 
@@ -149,10 +136,11 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: 350px;
-    margin-left: 590px;
-    background-position: relative;
+	margin-left: auto;
+    margin-right: auto;
+    background-position: absolute;
     display: block;
+    margin-top: 320px;
 
 }
 
@@ -168,27 +156,42 @@ p{
 	text-align: center;
 }
 
-img{
-	width:
-
+#video{
+	margin:auto;
+	width:340px;
 }
+
+#animations{
+	margin:auto;
+	width:340px;
+}
+
+#slider1_container{
+	margin: auto;
+}
+
+#slider2_container{
+	margin: auto;
+}
+
 
 		</style>
 	</head>
 	
 	<body>
- 
+ 	<div id="center">
+
 	<div class = "header">
 	</div>
 	
-	<div class = "nav">
-	<a href="http://pandapi.github.io/About.html" class="about" title="About">
-	<a href="http://pandapi.github.io/Work.html" class="work" title="Work"></a>
-	<a href="http://pandapi.github.io/Contact.html" class="contact" title="Contact"></a>
+	<div id = "nav">
+	<a href="About.html" class="about" title="About"></a>
+	<a href="Work.html" class="work" title="Work"></a>
+	<a href="Contact.html" class="contact" title="Contact"></a>
 	</div>
 	
-	<div class = "video">
-	<img src = 'https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/VideosBanner.png?raw=true' style = "position: absolute; margin:auto; width: 350px; height: 120px">
+		<div id = "video">
+	<img src = 'https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/VideosBanner.png?raw=true' style = "position: absolute; top: 240px; width: 350px; height: 120px">
 	</div>
 
     <!-- it works the same with all jquery version from 1.x to 2.x -->
@@ -242,7 +245,7 @@ img{
     </script>
     <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-    <div id="slider1_container" style="position: relative; margin:auto; width: 640px;
+    <div id="slider1_container" style="position: relative; top: 100px; width: 640px;
         height: 390px;">
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 640px; height: 390px;
@@ -468,8 +471,8 @@ img{
     </div>
     <!-- Jssor Slider End -->
     
-    <div class = "animations">
-	<img src = 'https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Animations.png?raw=true' style = "position: absolute; top: 800px; margin:auto; width: 350px; height: 120px">
+    <div id = "animations">
+	<img src = 'https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Animations.png?raw=true' style = "position: absolute; top: 800px; width: 350px; height: 120px">
 	</div>
         <!-- it works the same with all jquery version from 1.x to 2.x -->
     <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
@@ -522,7 +525,7 @@ img{
     </script>   
 	  <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-    <div id="slider2_container" style="position: relative; top: 280px; left: 320px; width: 640px;
+    <div id="slider2_container" style="position: relative; top: 280px; width: 640px;
         height: 390px;">
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 640px; height: 390px;
@@ -628,16 +631,15 @@ img{
         <span u="arrowright" class="jssora03r" style="top: 165px; right: 8px;">
         </span>
         <!--#endregion Arrow Navigator Skin End -->
-        </div>
- 
-    
-    	<a href="http://pandapi.github.io/index.html" class="home" title="Homepage"></a>
-    	<a href="http://pandapi.github.io/Work.html" class="back" title="work"></a>
+        </div>	
+	
+	<div>
+	<a href="index.html" class="home" title="Homepage"></a>
+	<a href="Work.html" class="back" title="work"></a>
+	</div>
+	
+	</div>
+	
 
-    
-    <br></br>
-	<br></br>
-    <br></br>
-
-</body>
+	</body>
 </html>
