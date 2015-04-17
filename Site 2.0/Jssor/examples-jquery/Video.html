@@ -154,17 +154,13 @@ body{
                 $PauseOnHover: 1,                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
                 $ArrowKeyNavigation: true,   		//[Optional] Allows keyboard (arrow key) navigation or not, default value is false
 
-                $BulletNavigatorOptions: {                //[Optional] Options to specify and enable navigator or not
-                    $Class: $JssorBulletNavigator$,       //[Required] Class to create navigator instance
-                    $ChanceToShow: 2,               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $ActionMode: 1,                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
-                    $AutoCenter: 1,                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1,                      //[Optional] Steps to go for each navigation request, default value is 1
-                    $Lanes: 1,                      //[Optional] Specify lanes to arrange items, default value is 1
-                    $SpacingX: 10,                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                    $SpacingY: 0,                   //[Optional] Vertical space between each item in pixel, default value is 0
-                    $Orientation: 1                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-                }
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,
+                    }
+                    
             };
 
             var jssor_slider1 = new $JssorSlider$("slider1_container", options);
@@ -295,7 +291,7 @@ body{
             </div>
         </div>
  
-        <!--#region Bullet Navigator Skin Begin -->
+        <!--#region Bullet Navigator Skin Begin
         <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
         <style>
             /* jssor slider bullet navigator skin 03 css */
@@ -332,14 +328,46 @@ body{
             <!-- bullet navigator item prototype -->
             <div u="prototype"></div></div>
         </div>
-        <!--#endregion Bullet Navigator Skin End
+        #endregion Bullet Navigator Skin End
         <a style=" : none" href="http://www.jssor.com">Carousel Slider</a>-->
+        
+        <!--#region Arrow Navigator Skin Begin -->
+        <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+        <style>
+            /* jssor slider arrow navigator skin 03 css */
+            /*
+            .jssora03l                  (normal)
+            .jssora03r                  (normal)
+            .jssora03l:hover            (normal mouseover)
+            .jssora03r:hover            (normal mouseover)
+            .jssora03l.jssora03ldn      (mousedown)
+            .jssora03r.jssora03rdn      (mousedown)
+            */
+            .jssora03l, .jssora03r {
+                display: block;
+                position: absolute;
+                /* size of arrow element */
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                background: url(../img/a03.png) no-repeat;
+                overflow: hidden;
+            }
+            .jssora03l { background-position: -3px -33px; }
+            .jssora03r { background-position: -63px -33px; }
+            .jssora03l:hover { background-position: -123px -33px; }
+            .jssora03r:hover { background-position: -183px -33px; }
+            .jssora03l.jssora03ldn { background-position: -243px -33px; }
+            .jssora03r.jssora03rdn { background-position: -303px -33px; }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora03l" style="top: 123px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora03r" style="top: 123px; right: 8px;">
+        </span>
     </div>
     <!-- Jssor Slider End -->
-    
-    <div class = "animations">
-	<img src = 'https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Animations.png?raw=true' style = "position: absolute; top: 800px; left: 490px; width: 350px; height: 120px">
-	</div>
 
 </body>
 </html>
