@@ -7,48 +7,31 @@
 		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
 		<style type="text/css">
 		
-body{ 
-    background-image: url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Background/background.png?raw=true');
-    background-position: center center;
-    background-repeat: repeat;
-    background-size: cover;
-    margin: 0 auto;
+#center {
+	width:  1000px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#nav{
+	width: 310px; 
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: -80px;
 }
 
 .header {
- margin-top: 0px;
- margin-left: 500px;
- width: 450px;
- height:450px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 300px;
+ height:250px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
- background-position: absolute;
+ background-position: static;
  display: block;
  background-size: 300px, 250px;
  background-repeat: no-repeat;
-}
-
-.contact{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
- 	margin-top: -260px;
-    margin-left: 700px;
-    background-position: absolute;
-    display: block;
-}
-
-.contact:hover{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
- 	margin-top: -260px;
-    margin-left: 700px;
-    background-position: absolute;
-    display: block;
 }
 
 .about{
@@ -57,25 +40,21 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 480px;
-    background-position: absolute;
-    display: block;
-    opacity: 0.5;
- 	filter: alpha(opacity=50); /* For IE8 and earlier */
+ 	margin-left: auto;
+    margin-right: auto;
+    background-position: relative;
+    display: inline-block;
 }
 
-/**.about:hover{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Text%20Underline.png?raw=true');
+.about:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutU.png?raw=true');
 	background-repeat: no-repeat;
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 480px;
-    background-position: absolute;
-    display: block;
-}**/
+    background-position: relative;
+    display: inline-block;
+}
 
 .work{
     background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkText.png?raw=true');
@@ -83,10 +62,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
-    background-position: absolute;
-    display: block;
+    background-position: relative;
+    display: inline-block;
 }
 
 .work:hover{
@@ -95,19 +72,56 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
-    background-position: absolute;
-    display: block;
+    background-position: relative;
+    display: inline-block;
 }
 
-.left {
-	padding-left: 270px;
-	margin-top: -500px;
+.contact{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
 }
-.right {
-	padding-left: 600px;
-	margin-top: -60px;
+
+.contact:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+
+.back{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: -20px;
+    background-position: absolute;
+    display: block;
+    
+}
+
+.back:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/BacktoworkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    background-position: absolute;
+    display: block;
 }
 
 .home{
@@ -116,64 +130,66 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: 0px;
-    margin-left: 600px;
+	margin-left: auto;
+    margin-right: auto;
     background-position: absolute;
     display: block;
-    }
-    
-.group:hover{
-	width: 200px;
+
+}
+
+.home:hover{
 	opacity: 0.5;
 }
 
-.back{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ReturnHome.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 200px, 200px;
-	width: 150px;
- 	height:100px;
- 	margin-top: -25px;
-    margin-left: 550px;
-    background-position: absolute;
-    display: block;
-    z-index: 3;  
+#content {
+	margin: auto;
+	width:1000px;
+	margin-top:-80px;
 }
 
-.back:hover{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ReturnHomeU.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 200px, 200px;
-	width: 150px;
- 	height:100px;
- 	margin-top: -25px;
-    margin-left: 550px;
-    background-position: absolute;
-    display: block; 
-    z-index: 3;
+.left {
+	display: inline-block;
+	margin-left: 100px;
+	z-index: 10;
+	background-position: absolute;
 }
+.right {
+	display: inline-block;
+	margin-left: -100px;
+	z-index: 1;
+	background-position: absolute;
+
+}
+
+
+
 
 
 		</style>
 	</head>
 	<body>
 	
+	<div id = "center">
+	
 	<div class = "header">
 	</div>
 	
-	<div class = "nav">
-	<a href="Contact.html" class="contact" title="Contact"></a>
+	<div id = "nav">
+	<a href="About.html" class="about" title="About"></a>
 	<a href="Work.html" class="work" title="Work"></a>
+	<a href="Contact.html" class="contact" title="Contact"></a>
 	</div>
+		
+	<div id="content">
 	
-	<div class="about" title="About"></div>
-	
+	<div class="left">
+	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png?raw=true" style="width:400px;height:480px">
+	</div>
+
 	<div class="right">
 	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Boxy1.png?raw=true" style="width:500px;height:500px">
 	</div>
 	
-	<div class="left">
-	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png?raw=true" style="width:400px;height:480px">
 	</div>
 	
 	<div class="group">
@@ -184,6 +200,8 @@ body{
 	<div class = "links">
 	<a href="mailto:hempinado@gmail.com" class="email" "title="Send an Email"></a>
 	<a href="https://github.com/pandapi/pandapi.github.io/raw/master/Site%202.0/Resume/2015.04.08%20Resume.pdf" class="resume" title="Download Resume"></a>
+	</div>
+	
 	</div>
 	
 	</body>
