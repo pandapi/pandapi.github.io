@@ -11,7 +11,6 @@
 	width:  1000px;
 	margin-left: auto;
 	margin-right: auto;
-	
 }
 
 #nav{
@@ -62,6 +61,8 @@
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
+ 	margin-left: auto;
+    margin-right: auto;
     background-position: relative;
     display: inline-block;
 }
@@ -92,6 +93,8 @@
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
+ 	margin-left: auto;
+    margin-right: auto;
     background-position: relative;
     display: inline-block;
 }
@@ -141,23 +144,28 @@
 	opacity: 0.5;
 }
 
-.links{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Viewresume%20copy.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 200px, 200px;
+#links{
 	width: 200px;
  	height:200px;
 	margin-left: auto;
     margin-right: auto;
+    margin-top: 0px;
+}
+
+.resume{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Viewresume%20copy.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
     background-position: absolute;
     display: block;
-    margin-top:-150px;
-    z-index:-1;
+    margin-top:-50px;
+    z-index:-1;    
+    width: 200px;
+ 	height:200px;
 
 }
 
-.links:hover{
-	margin-top: -140px;
+.resume:hover{
   	background-position:absolute;
 }
 
@@ -172,18 +180,16 @@
 	margin-left: 100px;
 	z-index: 10;
 	background-position: absolute;
-}
+	margin-top:50px;
+	}
+
 .right {
 	display: inline-block;
 	margin-left: -100px;
 	z-index: 5;
 	background-position: absolute;
+	margin-top:30px;
 }
-
-
-
-
-
 		</style>
 	</head>
 	<body>
@@ -194,7 +200,7 @@
 	</div>
 	
 	<div id = "nav">
-	<a href="About.html" class="about" title="About"></a>
+	<a href="#" class="about" title="About"></a>
 	<a href="Work.html" class="work" title="Work"></a>
 	<a href="Contact.html" class="contact" title="Contact"></a>
 	</div>
@@ -202,15 +208,15 @@
 	<div id="content">
 	
 	<div class="left">
-	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png?raw=true" style="width:400px;height:480px">
+	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png?raw=true" style="width:400px;height:500px;">
 	</div>
 
 	<div class="right">
-	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Boxy1.png?raw=true" style="width:500px;height:500px">
+	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Boxy1.png?raw=true" style="width:500px;height:500px;">
 	</div>
 	
-	<div class = "links">
-	<a href="https://github.com/pandapi/pandapi.github.io/raw/master/Site%202.0/Resume/2015.04.08%20Resume.pdf" class="resume" title="Download Resume"></a>
+	<div id = "links">
+	<a href="index.html" class="resume" title="Download Resume"></a>
 	</div>
 
 	
