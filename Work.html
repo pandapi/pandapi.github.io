@@ -14,41 +14,39 @@ body{
     background-size: cover;
 }
 
+#center {
+	width:  40em;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#nav{
+	width: 310px; 
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: -80px;
+}
+
+#boxes{
+	width: 850px; 
+	margin-left:-100px;
+	margin-right: auto;
+	margin-top: -40px;
+	height:250px;
+}
+
 .header {
- margin-top: 0px;
- margin-left: 500px;
- width: 450px;
- height:450px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 300px;
+ height:250px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
- background-position: absolute;
+ background-position: static;
  display: block;
  background-size: 300px, 250px;
  background-repeat: no-repeat;
-}
-
-
-.contact{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
- 	margin-top: -260px;
-    margin-left: 700px;
-    background-position: absolute;
-    display: block;
-}
-
-.contact:hover{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
- 	margin-top: -260px;
-    margin-left: 700px;
-    background-position: absolute;
-    display: block;
 }
 
 .about{
@@ -57,10 +55,10 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 480px;
-    background-position: absolute;
-    display: block;
+ 	margin-left: auto;
+    margin-right: auto;
+    background-position: relative;
+    display: inline-block;
 }
 
 .about:hover{
@@ -69,10 +67,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 480px;
-    background-position: absolute;
-    display: block;
+    background-position: relative;
+    display: inline-block;
 }
 
 .work{
@@ -81,28 +77,99 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
-    background-position: absolute;
-    display: block;
-    opacity: 0.5;
- 	filter: alpha(opacity=50); /* For IE8 and earlier */
+    background-position: relative;
+    display: inline-block;
+}
+
+.work:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.contact{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.contact:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
 }
 
 
+.back{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: -20px;
+    background-position: absolute;
+    display: block;
+    
+}
+
+.back:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/BacktoworkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    background-position: absolute;
+    display: block;
+}
+
+.home{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+	margin-left: auto;
+    margin-right: auto;
+    background-position: absolute;
+    display: block;
+    margin-top: 20px;
+
+}
+
+.home:hover{
+	opacity: 0.5;
+}
+
 .stories {
  margin-top: 0px;
- margin-left: 140px;
- width: 450px;
- height:450px;
+ margin:auto;
+ width: 270px;
+ height:250px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Stories.png?raw=true');
     filter: none;
   -webkit-filter: grayscale(0%);
  background-size: 270px 250px;
  background-repeat: no-repeat;
  z-index: 3;
- background-position: absolute;
- display: block;
+ background-position: relative;
+ display: inline-block;
 }
 
 .stories:hover {
@@ -113,17 +180,17 @@ body{
 
 .videos {
  margin-top: -450px;
- margin-left: 500px;
- width: 450px;
- height:450px;
+ width: 270px;
+ height:250px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Video.png?raw=true');
     filter: none;
   -webkit-filter: grayscale(0%);
  background-size: 270px 250px;
  background-repeat: no-repeat;
  z-index: 3;
- background-position: absolute;
- display: block;
+ background-position: relative;
+ display: inline-block;
+ margin:auto;
 }
 
 .videos:hover {
@@ -133,17 +200,17 @@ body{
 
 .data {
  margin-top: -450px;
- margin-left: 864px;
- width: 450px;
- height:450px;
+ width: 270px;
+ height:250px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/DataVizLogo.png?raw=true');
     filter: none;
   -webkit-filter: grayscale(0%);
  background-size: 270px 250px;
  background-repeat: no-repeat;
  z-index: 4;
-  background-position: absolute;
-  display: block;
+  background-position: relative;
+  display: inline-block;
+  margin: auto;
 }
 
 .data:hover {
@@ -151,31 +218,41 @@ body{
  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+
 		</style>
 	</head>
 	
 	<body>
- 
+ 	<div id="center">
+
 	<div class = "header">
 	</div>
 	
-	<div class = "nav">
-	
+	<div id = "nav">
+	<a href="About.html" class="about" title="About"></a>
+	<a href="Work.html" class="work" title="Work"></a>
 	<a href="Contact.html" class="contact" title="Contact"></a>
-	<div class="work" title="Work"></div>
-	
 	</div>
-	<a href="About.html" class="about" title="About">
 	
+	<div id = "boxes">
 	<a href="Stories.html" class="stories" "title="Stories"></a>
-
-	<a href="http://pandapi.github.io/Site 2.0/Jssor/examples-jquery/Video3.html" class="videos" title="Videos and Animation"></a>
-
+	<a href="http://pandapi.github.io/Site 2.0/Jssor/examples-jquery/Video4.html" class="videos" title="Videos and Animation"></a>
 	<a href="DataViz.html" class="data" title="Data and Visualizations"></a>
+	</div>
+	
+	<div>
+	<a href="index.html" class="home" title="Homepage"></a>
+	<a href="Work.html" class="back" title="work"></a>
+	</div>
 	
 	</div>
 	
 
-	
 	</body>
 </html>
+
+
+
+
+
+	
