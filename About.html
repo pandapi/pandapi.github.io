@@ -43,17 +43,11 @@
     margin-right: auto;
     background-position: relative;
     display: inline-block;
+    opacity: 0.5;
+ 	filter: alpha(opacity=50); /* For IE8 and earlier */
+
 }
 
-.about:hover{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutU.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
-    background-position: relative;
-    display: inline-block;
-}
 
 .work{
     background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkText.png?raw=true');
@@ -227,7 +221,7 @@ sw.Close();
 	</div>
 	
 	<div id = "nav">
-	<a href="#" class="about" title="About"></a>
+	<div class="about" title="About"></div>
 	<a href="Work.html" class="work" title="Work"></a>
 	<a href="Contact.html" class="contact" title="Contact"></a>
 	</div>
