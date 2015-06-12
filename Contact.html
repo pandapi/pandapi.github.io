@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+		<title>Hyacinth's Work</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
+		<style type="text/css">
+		
+body{ 
+    background-image: url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Background/background.png?raw=true');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#center {
+	width:  40em;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#nav{
+	width: 310px; 
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: -80px;
+}
+
+.header {
+ margin-left: auto;
+ margin-right: auto;
+ width: 300px;
+ height:250px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
+ background-position: static;
+ display: block;
+ background-size: 300px, 250px;
+ background-repeat: no-repeat;
+}
+
+.about{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-left: auto;
+    margin-right: auto;
+    background-position: relative;
+    display: inline-block;
+}
+
+.about:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.work{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.work:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.contact{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+ 	opacity: 0.5;
+ 	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+.back{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: -20px;
+    background-position: absolute;
+    display: block;
+    
+}
+
+.back:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/BacktoworkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    background-position: absolute;
+    display: block;
+}
+
+.home{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+	margin-left: auto;
+    margin-right: auto;
+    background-position: absolute;
+    display: block;
+    margin-top: 30px;
+
+}
+
+.home:hover{
+	opacity: 0.5;
+}
+	
+.email {
+ width: 370px;
+ height: 350px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Email.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 370px 350px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: -30px;
+ }
+
+.email:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#social{
+	margin-top: -100px;
+
+}
+
+.linkedin{
+ width: 52px;
+ height:45px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/linkedin%20icon.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 52px 45px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: inline-block;
+}
+
+.linkedin:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.twitter{
+ width: 52px;
+ height:45px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/twitter%20icon.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 52px 45px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: inline-block;
+}
+
+#social{
+	margin:auto;
+
+}
+.twitter:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.youtube{
+ width: 52px;
+ height:45px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/youtube%20icon.png?raw=true');
+    filter: none;
+  -webkit-filter: grayscale(0%);
+ background-size: 52px 45px;
+ background-repeat: no-repeat;
+ z-index: 3;
+ background-position: absolute;
+ display: inline-block;
+}
+
+.youtube:hover {
+ opacity: 0.5;
+ filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+		</style>
+	</head>
+	
+	<body>
+ 
+	<div id="center">
+
+	<div class = "header">
+	</div>
+	
+	<div id = "nav">
+	<a href="About.html" class="about" title="About"></a>
+	<a href="Work.html" class="work" title="Work"></a>
+	<div class="contact" title="Contact"></div>
+	</div>
+	
+	<div>
+	
+	<div id="container">
+	<div class = "links">
+	<a href="mailto:hempinado@gmail.com" class="email" "title="Send an Email"></a>
+	</div>
+	</div>
+	
+	<div id="social">
+	<a href="https://www.linkedin.com/profile/view?id=299611463&trk=nav_responsive_tab_profile" class="linkedin" "title="LinkedIn"></a>
+	<a href="https://twitter.com/sayhitohyacinth" class="twitter" title="Twitter"></a>
+	<a href="https://www.youtube.com/channel/UC1tDygRmzEK_O3B5ngSzttA/videos" class="youtube" title="YouTube"></a>
+	</div>
+	</div>
+	
+	<div>
+	<a href="index.html" class="home" title="Homepage"></a>
+	<a href="Work.html" class="back" title="work"></a>
+	</div>
+	
+	</div>
+
+	</body>
+</html>

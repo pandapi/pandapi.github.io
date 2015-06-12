@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+		<title>About Hyacinth</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://raw.github.com/josscrowcroft/accounting.js/master/accounting.min.js"></script>
+		<style type="text/css">
+		
+#center {
+	width:  1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#nav{
+	width: 310px; 
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: -80px;
+}
+
+.header {
+ margin-left: auto;
+ margin-right: auto;
+ width: 300px;
+ height:250px;
+ background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
+ background-position: static;
+ display: block;
+ background-size: 300px, 250px;
+ background-repeat: no-repeat;
+}
+
+.about{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/AboutText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-left: auto;
+    margin-right: auto;
+    background-position: relative;
+    display: inline-block;
+    opacity: 0.5;
+ 	filter: alpha(opacity=50); /* For IE8 and earlier */
+
+}
+
+
+.work{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-left: auto;
+    margin-right: auto;
+    background-position: relative;
+    display: inline-block;
+}
+
+.work:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/WorkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.contact{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactText.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+    background-position: relative;
+    display: inline-block;
+}
+
+.contact:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/ContactU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-left: auto;
+    margin-right: auto;
+    background-position: relative;
+    display: inline-block;
+}
+
+
+.back{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: -20px;
+    background-position: absolute;
+    display: block;
+    
+}
+
+.back:hover{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/BacktoworkU.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    background-position: absolute;
+    display: block;
+}
+
+.home{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+	margin-left: auto;
+    margin-right: auto;
+    background-position: absolute;
+    display: block;
+    margin-top: 50px;
+
+}
+
+.home:hover{
+	opacity: 0.5;
+}
+
+#links{
+	width: 200px;
+ 	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+.resume{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/DownloadResume.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 200px, 200px;
+    background-position: absolute;
+    display: block;
+    margin-top:-110px;
+    z-index:-10000;    
+    width: 200px;
+ 	height:200px;
+}
+
+.resume:hover{
+  	background-position:absolute;
+  	margin-top:-100px;
+  	z-index:-10000;
+}
+
+#content {
+	margin: auto;
+	width:1000px;
+	margin-top:-50px;
+}
+
+.left {
+	display: inline-block;
+	margin-left: 100px;
+	z-index: 10;
+	background-position: absolute;
+	margin-top:50px;
+	}
+
+.right {
+	display: inline-block;
+	margin-left: -90px;
+	z-index: 5;
+	background-position: absolute;
+	margin-top:30px;
+}
+		</style>
+		
+		<script>
+		
+Response.ContentType = "application/pdf";
+Response.AddHeader("content-disposition", "inline;filename=" + filename + ".pdf");
+Response.Cache.SetCacheability(HttpCacheability.NoCache);
+StringWriter sw = new StringWriter();
+HtmlTextWriter hw = new HtmlTextWriter(sw);
+pnl_print.RenderControl(hw);
+
+StringReader sr = new StringReader(sw.ToString());
+Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 100f, 0f);
+HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
+PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+pdfDoc.Open();
+htmlparser.Parse(sr);
+pdfDoc.Close();
+Response.Write(pdfDoc);
+Response.End();
+
+sr.Close();
+hw.Close();
+sw.Close();
+
+		</script>
+	</head>
+	<body>
+	
+	<div id = "center">
+	
+	<div class = "header">
+	</div>
+	
+	<div id = "nav">
+	<div class="about" title="About"></div>
+	<a href="Work.html" class="work" title="Work"></a>
+	<a href="Contact.html" class="contact" title="Contact"></a>
+	</div>
+		
+	<div id="content">
+	
+	<div class="left">
+	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image%20copy.png?raw=true" style="width:400px;height:480px;">
+	</div>
+
+	<div class="right">
+	<img src = "https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Boxy1%20copy.png?raw=true" style="width:500px;height:500px;">
+	</div>
+	
+	<div id = "links">
+	<a href="http://pandapi.github.io/Site%202.0/Resume/Empinado%20Resume.pdf" class="resume" title="Download Resume"></a>
+	</div>
+
+	
+	</div>
+	
+
+	
+	<div class="group">
+	<a href="index.html" class="home" title="Homepage"></a>
+    <a href="index.html" class="back" title="Return Home"></a>
+	</div>
+	
+	
+	</div>
+	
+	</body>
+</html>
