@@ -12,16 +12,27 @@ body{
     background-size: cover;
 }
 
+#center {
+	width:  1024px;
+	margin: auto;
+}
+
+.nav{
+	width: 310px; 
+	height: 100px;
+	margin: auto;
+	margin-top: 0px;
+}
+
 .header {
- margin-top: 0px;
- margin-left: 500px;
- width: 450px;
- height:450px;
+ width: 290px;
+ height:160px;
  background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Header%20Logo.png?raw=true');
  background-position: static;
  display: block;
- background-size: 300px, 250px;
+ background-size: 300px, 290px;
  background-repeat: no-repeat;
+ margin: auto;
 }
 
 .about{
@@ -30,10 +41,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -280px;
-    margin-left: 480px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .about:hover{
@@ -42,10 +51,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -280px;
-    margin-left: 480px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .work{
@@ -54,10 +61,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .work:hover{
@@ -66,10 +71,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 590px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .contact{
@@ -78,10 +81,8 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 700px;
-    background-position: relative;
-    display: block;
+ 	background-position: relative;
+    display: inline-block;
 }
 
 .contact:hover{
@@ -90,13 +91,39 @@ body{
 	background-size: 100px, 100px;
 	width: 100px;
  	height:100px;
- 	margin-top: -100px;
-    margin-left: 700px;
     background-position: relative;
-    display: block;
+    display: inline-block;
 }
 
-    
+.story{
+ 	width: 400px;
+ 	height:120px;
+ 	background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Stories%20Banner.png?raw=true');
+ 	background-position: static;
+ 	display: block;
+ 	background-size: 400px, 120px;
+ 	background-repeat: no-repeat;
+ 	margin:auto;
+
+}
+
+.house{
+    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100px, 100px;
+	width: 100px;
+ 	height:100px;
+ 	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+    background-position: relative;
+    display: block;
+
+}
+
+.house:hover{
+	opacity: 0.5;
+}
 
 .back{
     background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Backtowork.png?raw=true');
@@ -104,9 +131,10 @@ body{
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: -15px;
-    margin-left: 540px;
-    background-position: absolute;
+ 	margin-top: -20px;
+	margin-left: auto;
+	margin-right: auto;
+    background-position: relative;
     display: block;
     }
 
@@ -116,42 +144,8 @@ body{
 	background-size: 200px, 200px;
 	width: 200px;
  	height:200px;
- 	margin-top: -15px;
-    margin-left: 540px;
-    background-position: absolute;
+    background-position: relative;
     display: block;
-}
-
-.house{
-    background:url('https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Home%20Chalky.png?raw=true');
-	background-repeat: no-repeat;
-	background-size: 100px, 100px;
-	width: 100px;
- 	height:100px;
- 	margin-top: 30px;
-    margin-left: 590px;
-    background-position: absolute;
-    display: block;
-
-}
-
-.house:hover{
-	opacity: 0.5;
-}
-
-
-.news svg {
-	margin-left: 20px;
-	background-color: #363636;
-	font-family: 'Shift', sans-serif;
-	font-size: 22px;
-	text-align: center center;
-	color: #FFFFFF;
-	text-decoration:none;
-}
-
-.news a{
-	text-decoration: none;
 }
 
 .box1:hover{
@@ -164,79 +158,102 @@ body{
     top: -250px; /* change this value to one that suits you */
     position: absolute;
     }
+    
+.news svg {
+	background-color: #363636;
+	font-family: 'Shift', sans-serif;
+	font-size: 22px;
+	text-align: center center;
+	color: #FFFFFF;
+	text-decoration:none;
+	margin-left: 20px;
+	margin-top: 10px;
+}
 
+.news a{
+	text-decoration: none;
+	height: 300px;
+}
+    
 .news img{
 	margin-left: -290px;
 	margin-bottom: 10px;
 	}
-	
-.tiles {
-	margin-top: 80px;
+
+#tiles{
+	width: 950px;
+	height: 950px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#box2:hover{
-    position: relative;
-}
 
-.box2:hover:after{
-    content: url(https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/About%20Image.png); /* no need for qoutes */
-    left: 40px; /* change this value to one that suits you */
-    top: -250px; /* change this value to one that suits you */
-    position: absolute;
 
 		</style>
+		
 	</head>
 	
 	<body>
+	
+	<div id = "center">
  
 	<div class = "header">
 	</div>
 	
 	<div class = "nav">
-	<a href="About.html" class="about" title="About">
+	<a href="About.html" class="about" title="About"></a>
 	<a href="Work.html" class="work" title="Work"></a>
 	<a href="Contact.html" class="contact" title="Contact"></a>
 	</div>
 	
 	<div class = "story">
-	<img src = 'https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Stories%20Banner.png?raw=true' style = "position: absolute; top: 240px; left: 490px; width: 350px; height: 120px">
 	</div>
 	
 	
-<div class = "tiles">
-<div class="news">
-<a href="http://www.georgiahealthnews.com/2014/01/shade-obesity-research-uga/" class="box1">
-   <svg width="300" height="300">
-   <text x="20" y="50" fill="white">'A new shade of obesity</text>
-    <text x="20" y="75" fill="white">research at UGA'</text>
-     <text x="20" y="95" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
-      <img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/obesity.png?raw=true'width="280" height="160"/>
- 
- <a href="http://www.georgiahealthnews.com/2014/05/home-cooking-georgia-schools-put-emphasis-locally-grown-lunches/" class="box1">
-   <svg width="300" height="300">
-   <text x="20" y="40" fill="white">'Home Cooking: Schools </text>
-    <text x="20" y="65" fill="white">put new emphasis on</text>
-    <text x="20" y="90" fill="white"> locally grown lunches'</text>
-     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
-      	<img src='https://raw.githubusercontent.com/pandapi/hyacinthempinado/master/news%20images/Home%20cooking.jpg'width="280" height="160"/>
+<div id = "tiles">
 
-<a href="http://www.georgiahealthnews.com/2014/02/navigator-program-avoid-controversy/" class="box1">
-   <svg width="300" height="300">
-   <text x="20" y="40" fill="white">'Navigator program </text>
-    <text x="20" y="65" fill="white">tries to avoid</text>
-    <text x="20" y="90" fill="white"> controversy'</text>
-     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
-      	<img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/open-uri20140503-8943-12ijvk_article.jpg?raw=true/'width="280" height="160"/>
+<div class= "news">
 
-<a href="http://www.georgiahealthnews.com/2014/04/small-business-coverage-big-problem-slow-start/" class="box1">
+<div class = "news1">
+
+<a href='http://www.georgiahealthnews.com/2015/04/honeybees-dying-bad-news-health/' class="box1">
    <svg width="300" height="300">
-   <text x="20" y="40" fill="white">'Small firms ACA coverage </text>
-    <text x="20" y="65" fill="white"> has a big problem: </text>
-    <text x="20" y="93" fill="white"> It's off to a very slow start'</text>
+   <text x="20" y="40" fill="white">'Honeybees are dying </text>
+    <text x="20" y="65" fill="white">and that's bad news for </text>
+    <text x="20" y="90" fill="white">our health' </text>
      <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
-      	<img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/business.jpg?raw=true'width="280" height="160"/>
+      	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/honeybee.jpg?raw=true' width="280" height="140"/>
+  		</a>
+  		
+<a href='http://news.uga.edu/releases/article/plant-chemicals-liver-damage-fat-accumulated-during-menopause-0215/' class="box1"> 
+   <svg width="300" height="300">
+   <text x="20" y="40" fill="white">'Plant chemicals may </text>
+    <text x="20" y="65" fill="white">prevent liver damage </text>
+    <text x="20" y="90" fill="white">caused by fat accumulated </text>
+     <text x="20" y="115" fill="white"> during menopause'</text>
+     <text x="20" y="135" fill="white" font-style="italic" font-size="12px">UGA Today</text>
+      	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Screen%20Shot%202015-04-06%20at%2010.45.37%20PM.png?raw=true' width="280" height="140"/>
+		</a>
+
       	
-<a href="http://news.uga.edu/releases/article/uga-researchers-to-study-cause-of-obesity-related-inflammation/" class="box1">
+<a href="http://www.georgiahealthnews.com/2015/02/disabled-vets-field-special-sports-programs/?ref=ft" class="box1">
+   <svg width="300" height="300">
+   <text x="20" y="40" fill="white">'Disabled vets take </text>
+    <text x="20" y="65" fill="white">the field again - with special</text>
+    <text x="20" y="90" fill="white"> sports programs' </text>
+     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
+      	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/MVI_9597.Still002.jpg?raw=true' width="280" height="160"/>
+      	</a>
+ 
+
+		
+
+</div>
+
+<div class= "news2">
+      	
+      	<a href="http://news.uga.edu/releases/article/uga-researchers-to-study-cause-of-obesity-related-inflammation/" class="box1">
    <svg width="300" height="300">
    <text x="20" y="40" fill="white">'UGA researchers to </text>
     <text x="20" y="65" fill="white"> study cause of obesity-</text>
@@ -244,44 +261,67 @@ body{
      <text x="20" y="117" fill="white" font-style="italic" font-size="12px">UGA Today</text>
       	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Screen%20Shot%202015-04-06%20at%2010.44.00%20PM.png?raw=true'width="280" height="160"/>
 
-<a href="http://www.georgiahealthnews.com/2015/02/disabled-vets-field-special-sports-programs/?ref=ft" class="box1">
-   <svg width="300" height="300">
-   <text x="20" y="40" fill="white">'Disabled vets take </text>
-    <text x="20" y="65" fill="white">the field again - with special</text>
-    <text x="20" y="90" fill="white"> sports programs' </text>
-     <text x="20" y="117" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
-      	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/MVI_9597.Still002.jpg?raw=true'width="280" height="160"/>
-      	
-<a href='http://www.redandblack.com/uganews/science_health/uga-joins-science-coalition-for-more-federal-research-funds/article_8a4d046a-017d-11e4-b99f-001a4bcf6878.html' class="box1">
+      	<a href='http://www.redandblack.com/uganews/science_health/uga-joins-science-coalition-for-more-federal-research-funds/article_8a4d046a-017d-11e4-b99f-001a4bcf6878.html' class="box1">
    <svg width="300" height="300">
    <text x="20" y="40" fill="white">'UGA joins Science  </text>
     <text x="20" y="65" fill="white">Coalition for more federal </text>
-    <text x="20" y="93" fill="white">research funds'</text>
-     <text x="20" y="120" fill="white" font-style="italic" font-size="12px">The Red and Black</text>
+    <text x="20" y="90" fill="white">research funds'</text>
+     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">The Red and Black</text>
       	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/DavidLee.png?raw=true' width="280" height="160"/>
-
-<a href='http://news.uga.edu/releases/article/plant-chemicals-liver-damage-fat-accumulated-during-menopause-0215/' class="box1">
+		</a>
+		
+		 <a href="http://www.georgiahealthnews.com/2014/05/home-cooking-georgia-schools-put-emphasis-locally-grown-lunches/" class="box1">
    <svg width="300" height="300">
-   <text x="20" y="40" fill="white">'Plant chemicals may </text>
-    <text x="20" y="65" fill="white">prevent liver damage </text>
-    <text x="20" y="90" fill="white">caused by fat accumulated </text>
-     <text x="20" y="115" fill="white"> during menopause'</text>
-     <text x="20" y="135" fill="white" font-style="italic" font-size="12px">UGA Today</text>
-      	<img src='https://github.com/pandapi/pandapi.github.io/blob/master/Site%202.0/Images/Screen%20Shot%202015-04-06%20at%2010.45.37%20PM.png?raw=true'width="280" height="140"/>
-      	           
+   <text x="20" y="40" fill="white">'Home Cooking: Schools </text>
+    <text x="20" y="65" fill="white">put new emphasis on</text>
+    <text x="20" y="90" fill="white"> locally grown lunches'</text>
+     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
+      	<img src='https://raw.githubusercontent.com/pandapi/hyacinthempinado/master/news%20images/Home%20cooking.jpg'width="280" height="160"/>
+		</a>
+		
+      </div>
+      
+    <div class = "news3">
+		
+		<a href="http://www.georgiahealthnews.com/2014/04/small-business-coverage-big-problem-slow-start/" class="box1">
+   <svg width="300" height="300">
+   <text x="20" y="40" fill="white">'Small firms ACA coverage </text>
+    <text x="20" y="65" fill="white"> has a big problem: </text>
+    <text x="20" y="93" fill="white"> It's off to a very slow start'</text>
+     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
+      	<img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/business.jpg?raw=true' width="280" height="160"/>
+      	</a>
+		
+		<a href="http://www.georgiahealthnews.com/2014/02/navigator-program-avoid-controversy/" class="box1">
+   <svg width="300" height="300">
+   <text x="20" y="40" fill="white">'Navigator program </text>
+    <text x="20" y="65" fill="white">tries to avoid</text>
+    <text x="20" y="90" fill="white"> controversy'</text>
+     <text x="20" y="110" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
+      	<img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/open-uri20140503-8943-12ijvk_article.jpg?raw=true/'width="280" height="160"/>
+		</a>
+		
+		<a href="http://www.georgiahealthnews.com/2014/01/shade-obesity-research-uga/" class="box1">
+<svg width="300" height="300">
+   <text x="20" y="50" fill="white">'A new shade of obesity</text>
+    <text x="20" y="75" fill="white">research at UGA'</text>
+     <text x="20" y="95" fill="white" font-style="italic" font-size="12px">Georgia Health News</text>
+      <img src='https://github.com/pandapi/hyacinthempinado/blob/master/news%20images/obesity.png?raw=true' width="280" height="160"/>
+      </a>
+		
+		</div>
+		
+		</div>
+  	               	    	           
 </div>
+
 	<div class = "End">
-	<a href="index.html" class="house" title="Homepage"></a>
-	<a href="Work.html" class="back" title="work"></a>
+	<a href="index.html" class="house" title="Homepage"> </a>
+	<a href="Work.html" class="back" title="work"> </a>
     </div>
-	
-
-<br></br>
-<br></br>
-<br></br>
 
 
-
+</div>
 </div>
 	</body>
 </html>
